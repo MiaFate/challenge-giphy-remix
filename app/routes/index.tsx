@@ -35,24 +35,6 @@ export const action: ActionFunction = async ({ request }) => {
 
 };
 
-/* export async function action({ request }: any) {
-  let formData = await request.formData();
-  let { searchbox } = Object.fromEntries(formData);
-
-  let url = "";
-  if(searchbox==""){
-    url = `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.APIKEY}&limit=25&rating=g`;
-  }else{
-    url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.APIKEY}&q=${searchbox}&limit=25&offset=0&rating=G&lang=en`;
-  }
-
-  const response = await fetch(url);
-  const { data } = await response.json();
-
-  return { data };
-
-}; */
-
 export default function Index() {
   return (
     <>
